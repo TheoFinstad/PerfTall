@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfekt Tall & Bakgrunnsfarge</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+
+    <h1>Perfekt Tall Sjekk</h1>
+    <input type="number" id="numberInput" placeholder="Skriv et tall" />
+    <button onclick="checkPerfectNumber()">Sjekk</button>
+    <p id="result"></p>
+
+    <div class="color-controls">
+        <h2>Juster Bakgrunnsfarge</h2>
+        <label>Rød: <input type="range" id="redRange" min="0" max="255" value="255" oninput="updateColor()"></label><br>
+        <label>Grønn: <input type="range" id="greenRange" min="0" max="255" value="255" oninput="updateColor()"></label><br>
+        <label>Blå: <input type="range" id="blueRange" min="0" max="255" value="255" oninput="updateColor()"></label><br>
+    </div>
+
+    <div class="color-preview" id="colorPreview"></div>
+
+    <div class="buttons">
+        <button onclick="generateRandomColor()">Tilfeldig farge</button>
+        <input type="color" id="colorPicker" onchange="pickColor()" style="display:none;">
+        <button onclick="document.getElementById('colorPicker').click()">Åpne fargevelger</button>
+    </div>
+
+    <script src="script3.js"></script>
+</body>
+</html>
